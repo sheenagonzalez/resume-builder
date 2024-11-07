@@ -49,8 +49,9 @@ button {
 }
 
 .form-container {
+  min-width: 35rem;
   padding: 1rem 2rem;
-  width: 80%;
+  width: 65%;
   height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -230,11 +231,15 @@ button,
   width: 100%;
 }
 
+.resume-holder {
+  background-color: white;
+  padding: 2rem 4rem;
+}
+
 .resume {
   background-color: white;
-  padding: 1.5rem 2.5rem;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   color: black;
 }
 
@@ -314,7 +319,9 @@ button,
 }
 
 .item-bullet {
-  font-size: 10px;
+  font-size: 11px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 .download-btn {

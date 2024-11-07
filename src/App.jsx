@@ -161,10 +161,10 @@ function App() {
   const downloadPDF = () => {
     const element = document.querySelector('.resume');
     const opt = {
-      margin: 1,
+      margin: [.5, 1, .5, 1],
       filename: 'resume.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 1 },
+      image: { type: 'svg', quality: 1 },
+      html2canvas: { scale: 2 },
       jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
     };
     html2pdf().from(element).set(opt).save();
@@ -223,7 +223,9 @@ function App() {
         />
       </div>
       <div className="resume-container">
-        <Resume resume={resume} />
+        <div className="resume-holder">
+          <Resume resume={resume} />
+        </div>
       </div>
       <button className="download-btn" onClick={downloadPDF}>
         <DownloadIcon className="download-icon" />
