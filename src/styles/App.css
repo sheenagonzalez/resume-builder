@@ -1,0 +1,200 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.25rem;
+  transition: 0.2s ease;
+  font-size: 0.825rem;
+  font-weight: bold;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.app-container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  color: white;
+  background-color: var(--dark);
+}
+
+.form-container {
+  padding: 1rem 2rem;
+  width: 80%;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.form {
+  background-color: white;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 0.5rem;
+  color: var(--dark);
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: start;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.input-header {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--navy);
+}
+
+.input-title {
+  margin: 1rem 0 0.5rem;
+}
+
+.input-list {
+  width: 100%;
+}
+
+.input-section--sub {
+  font-size: 0.5rem;
+}
+
+.input-card {
+  width: 100%;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--dark-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+}
+
+.input-card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-group--small {
+  width: calc(50% - 0.25rem);
+}
+
+.input-label {
+  color: gray;
+  font-size: 0.825rem;
+}
+
+.input {
+  padding: 0.5rem;
+  border: 2px solid var(--bluish-gray);
+  background-color: var(--bluish-gray);
+  transition: 0.2s linear;
+}
+
+.input:focus,
+.input:focus-visible,
+.input:active {
+  border-bottom: 2px solid var(--navy);
+  outline: none;
+}
+
+.delete-btn {
+  background-color: var(--red);
+  color: white;
+  width: max-content;
+  font-size: 0.5rem;
+}
+
+.delete-icon {
+  padding: 0;
+  font-size: 1rem !important;
+}
+
+.add-btn {
+  background-color: transparent;
+  color: var(--indigo);
+  padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.resume-container {
+  background-color: var(--bluish-gray);
+  padding: 2rem 4rem;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.resume {
+  background-color: white;
+  padding: 2rem 4rem;
+  font-size: 0.75rem;
+  color: black;
+}
+
+.download-btn {
+  position: fixed;
+  width: max-content;
+  column-gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--navy);
+  color: white;
+  right: 1.5rem;
+  bottom: 1rem;
+  z-index: 10;
+  font-size: 1rem;
+  border: 0;
+  border-radius: 4rem;
+}
+
+.download-btn:hover,
+.download-btn:focus {
+  transform: translateY(-0.5rem);
+  box-shadow: 2px 4px 4px hsl(0deg 0% 0% / 0.25);
+}
+
+.download-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+  background-color: var(--bluish-gray);
+  color: black;
+  outline: none;
+}
+
+.download-icon {
+  font-size: 1.25rem;
+  margin-top: 0.125rem;
+}
+
+.section-list,
+.input-list {
+  padding: 0;
+  margin: 0;
+}
+
+.divider {
+  border: 0.5px solid var(--dark-gray);
+}
+
+.section-item,
+.input-card {
+  list-style: none;
+}
