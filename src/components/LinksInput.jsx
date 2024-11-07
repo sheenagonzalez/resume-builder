@@ -10,7 +10,7 @@ function LinksInput({ linksData, onChange, onAdd, onRemove }) {
         <div className="input-group">
           <label className="input-label" htmlFor="label">Label</label>
           <input
-            className="form-input"
+            className="input"
             type="text"
             id="label"
             name="label"
@@ -21,7 +21,7 @@ function LinksInput({ linksData, onChange, onAdd, onRemove }) {
         <div className="input-group">
           <label className="input-label" htmlFor="url">URL</label>
           <input
-            className="form-input"
+            className="input"
             type="url"
             id="url"
             name="url"

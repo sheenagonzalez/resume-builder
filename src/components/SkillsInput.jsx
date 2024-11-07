@@ -10,7 +10,7 @@ function SkillsInput({ skillsData, onChange, onAdd, onRemove }) {
         <div className="input-group">
           <label className="input-label" htmlFor="label">Label</label>
           <input
-            className="form-input"
+            className="input"
             type="text"
             id="label"
             name="label"
@@ -22,7 +22,7 @@ function SkillsInput({ skillsData, onChange, onAdd, onRemove }) {
           <label className="input-label" htmlFor="skills">Skills</label>
           <span className="input-caption">Separate skills with a comma.</span>
           <input
-            className="form-input"
+            className="input"
             type="text"
             id="skills"
             name="skills"
