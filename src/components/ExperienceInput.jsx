@@ -1,4 +1,4 @@
-import { PropTypes } from "prop-types";
+import PropTypes from 'prop-types';
 import { format, addMonths } from 'date-fns';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
