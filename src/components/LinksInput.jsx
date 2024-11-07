@@ -6,14 +6,14 @@ function LinksInput({ linksData, onChange, onAdd, onRemove }) {
   const linksList = linksData.map((link) => {
     const index = linksData.indexOf(link);
     return (
-      <li key={index} data-key={index} className="input-card">
+      <li key={index} data-key={index} className="input-card link">
         <div className="input-card-header">
           <h3 className="input-card-heading">{link.label ? link.label : "Link "+(index+1)}</h3>
           <button className="delete-btn" onClick={() => onRemove(index)}>
             <DeleteForeverIcon className="delete-icon" />
           </button>
         </div>
-        <div className="input-group">
+        <div className="input-group input-group--small">
           <label className="input-label" htmlFor="label">Label</label>
           <input
             className="input"
@@ -24,7 +24,7 @@ function LinksInput({ linksData, onChange, onAdd, onRemove }) {
             onChange={onChange}
           />
         </div>
-        <div className="input-group">
+        <div className="input-group input-group--small">
           <label className="input-label" htmlFor="url">URL</label>
           <input
             className="input"

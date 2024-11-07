@@ -15,7 +15,7 @@ function ProjectsInput({ projectsData, onChange, onAdd, onRemove }) {
             <DeleteForeverIcon className="delete-icon" />
           </button>
         </div>
-        <div className="input-group">
+        <div className="input-group input-group--small">
           <label className="input-label" htmlFor={"title-"+index}>Title</label>
           <input
             className="input"
@@ -26,7 +26,7 @@ function ProjectsInput({ projectsData, onChange, onAdd, onRemove }) {
             onChange={onChange}
           />
         </div>
-        <div className="input-group">
+        <div className="input-group input-group--small">
           <label className="input-label" htmlFor={"completionDate-"+index}>Completion date</label>
           <input
             className="input"

@@ -38,7 +38,7 @@ function PersonalInfoInput({ fname, lname, jobTitle, email, phone, onChange }) {
           onChange={onChange}
         />
       </div>
-      <div className="input-group">
+      <div className="input-group input-group--small">
         <label className="input-label" htmlFor="email">Email <span className="asterisk">&#42;</span></label>
         <input
           className="input"
@@ -50,7 +50,7 @@ function PersonalInfoInput({ fname, lname, jobTitle, email, phone, onChange }) {
           required
         />
       </div>
-      <div className="input-group">
+      <div className="input-group input-group--small">
         <label className="input-label" htmlFor="phone">Phone</label>
         <input
           className="input"

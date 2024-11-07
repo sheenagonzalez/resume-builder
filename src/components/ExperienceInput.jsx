@@ -25,7 +25,7 @@ function ExperienceInput({ experienceData, onChange, onAdd, onRemove }) {
             onChange={onChange}
           />
         </div>
-        <div className="input-group">
+        <div className="input-group input-group--small">
           <label className="input-label" htmlFor={"employer-"+index}>Employer</label>
           <input
             className="input"
@@ -36,7 +36,18 @@ function ExperienceInput({ experienceData, onChange, onAdd, onRemove }) {
             onChange={onChange}
           />
         </div>
-        <div className="input-group">
+        <div className="input-group input-group--small">
+          <label className="input-label" htmlFor={"location-"+index}>Location</label>
+          <input
+            className="input"
+            type="text"
+            id={"location-"+index}
+            name="location"
+            defaultValue={experience.location}
+            onChange={onChange}
+          />
+        </div>
+        <div className="input-group input-group--small">
           <label className="input-label" htmlFor={"startDate-"+index}>Start date</label>
           <input
             className="input"
@@ -47,7 +58,7 @@ function ExperienceInput({ experienceData, onChange, onAdd, onRemove }) {
             onChange={onChange}
           />
         </div>
-        <div className="input-group">
+        <div className="input-group input-group--small">
           <label className="input-label" htmlFor={"endDate-"+index}>End date</label>
           <input
             className="input"
@@ -59,28 +70,6 @@ function ExperienceInput({ experienceData, onChange, onAdd, onRemove }) {
           />
         </div>
         <div className="input-group">
-          <label className="input-label" htmlFor={"isCurrent-"+index}>Currently working here</label>
-          <input
-            className="input"
-            type="checkbox"
-            id={"isCurrent-"+index}
-            name="isCurrent"
-            defaultValue={experience.isCurrent}
-            onChange={onChange}
-          />
-        </div>
-        <div className="input-group">
-          <label className="input-label" htmlFor={"location-"+index}>Location</label>
-          <input
-            className="input"
-            type="text"
-            id={"location-"+index}
-            name="location"
-            defaultValue={experience.location}
-            onChange={onChange}
-          />
-        </div>
-        <div className="input-group">
           <label className="input-label" htmlFor={"summary-"+index}>Summary</label>
           <input
             className="input"
@@ -88,6 +77,17 @@ function ExperienceInput({ experienceData, onChange, onAdd, onRemove }) {
             id={"summary-"+index}
             name="summary"
             defaultValue={experience.summary}
+            onChange={onChange}
+          />
+        </div>
+        <div className="input-group input-group--small">
+          <label className="input-label" htmlFor={"isCurrent-"+index}>Currently working here</label>
+          <input
+            className="input"
+            type="checkbox"
+            id={"isCurrent-"+index}
+            name="isCurrent"
+            defaultValue={experience.isCurrent}
             onChange={onChange}
           />
         </div>

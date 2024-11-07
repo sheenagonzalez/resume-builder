@@ -36,7 +36,7 @@ function EducationInput({ educationData, onChange, onAdd, onRemove }) {
             onChange={onChange}
           />
         </div>
-        <div className="input-group">
+        <div className="input-group input-group--small">
           <label className="input-label" htmlFor={"startDate-"+index}>Start date</label>
           <input
             className="input"
@@ -47,7 +47,7 @@ function EducationInput({ educationData, onChange, onAdd, onRemove }) {
             onChange={onChange}
           />
         </div>
-        <div className="input-group">
+        <div className="input-group input-group--small">
           <label className="input-label" htmlFor={"endDate-"+index}>Expected/Graduation date</label>
           <input
             className="input"
