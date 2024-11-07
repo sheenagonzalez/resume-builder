@@ -69,8 +69,8 @@ function App() {
     const newEducation = {
       institution: '',
       degree: '',
-      startDate: Date.now('yyyy-MM'),
-      endDate: Date.now('yyyy-MM'),
+      startDate: Date.now('MMM yyyy'),
+      endDate: Date.now('MMM yyyy'),
       location: '',
       description: '',
     }
@@ -96,8 +96,8 @@ function App() {
     const newExperience = {
       position: '',
       employer: '',
-      startDate: Date.now('yyyy-MM'),
-      endDate: Date.now('yyyy-MM'),
+      startDate: Date.now('MMM yyyy'),
+      endDate: Date.now('MMM yyyy'),
       isCurrent: false,
       location: '',
       description: '',
@@ -124,7 +124,7 @@ function App() {
     const newProject = {
       title: '',
       links: [],
-      completionDate: Date.now('yyyy-MM'),
+      completionDate: Date.now('MMM yyyy'),
       description: '',
     }
     setResume({...resume, projects: [...resume.projects, newProject]})
