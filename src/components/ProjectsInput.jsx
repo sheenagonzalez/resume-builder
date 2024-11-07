@@ -9,6 +9,12 @@ function ProjectsInput({ projectsData, onChange, onAdd, onRemove }) {
     const index = projectsData.indexOf(project);
     return (
       <li key={index} data-key={index} className="input-card">
+        <div className="input-card-header">
+          <h3 className="input-card-heading">{project.label ? project.label : "Project "+(index+1)}</h3>
+          <button className="delete-btn" onClick={() => onRemove(index)}>
+            <DeleteForeverIcon className="delete-icon" />
+          </button>
+        </div>
         <div className="input-group">
           <label className="input-label" htmlFor={"title-"+index}>Title</label>
           <input
@@ -21,6 +27,7 @@ function ProjectsInput({ projectsData, onChange, onAdd, onRemove }) {
           />
         </div>
         <LinksInput
+          className="input-section--sub"
           linksData={project.links}
           onChange={onChange}
           onAdd={onAdd}
@@ -48,10 +55,6 @@ function ProjectsInput({ projectsData, onChange, onAdd, onRemove }) {
             onChange={onChange}
           />
         </div>
-        <button className="delete-btn" onClick={() => onRemove(index)}>
-          <DeleteForeverIcon className="delete-icon" />
-          <span className="delete-label">Delete</span>
-        </button>
       </li>
     )
   });

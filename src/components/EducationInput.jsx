@@ -8,6 +8,12 @@ function EducationInput({ educationData, onChange, onAdd, onRemove }) {
     const index = educationData.indexOf(education);
     return (
       <li key={index} data-key={index} className="input-card">
+        <div className="input-card-header">
+          <h3 className="input-card-heading">{education.label ? education.label : "Institution "+(index+1)}</h3>
+          <button className="delete-btn" onClick={() => onRemove(index)}>
+            <DeleteForeverIcon className="delete-icon" />
+          </button>
+        </div>
         <div className="input-group">
           <label className="input-label" htmlFor={"institution-"+index}>Institution</label>
           <input
@@ -74,10 +80,6 @@ function EducationInput({ educationData, onChange, onAdd, onRemove }) {
             onChange={onChange}
           />
         </div>
-        <button className="delete-btn" onClick={() => onRemove(index)}>
-          <DeleteForeverIcon className="delete-icon" />
-          <span className="delete-label">Delete</span>
-        </button>
       </li>
     )
   });

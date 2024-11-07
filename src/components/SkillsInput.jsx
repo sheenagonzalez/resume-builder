@@ -7,6 +7,12 @@ function SkillsInput({ skillsData, onChange, onAdd, onRemove }) {
     const index = skillsData.indexOf(skillset);
     return (
       <li key={index} data-key={index} className="input-card">
+        <div className="input-card-header">
+          <h3 className="input-card-heading">{skillset.label ? skillset.label : "Skillset "+(index+1)}</h3>
+          <button className="delete-btn" onClick={() => onRemove(index)}>
+            <DeleteForeverIcon className="delete-icon" />
+          </button>
+        </div>
         <div className="input-group">
           <label className="input-label" htmlFor="label">Label</label>
           <input
@@ -30,10 +36,6 @@ function SkillsInput({ skillsData, onChange, onAdd, onRemove }) {
             onChange={onChange}
           />
         </div>
-        <button className="delete-btn" onClick={() => onRemove(index)}>
-          <DeleteForeverIcon className="delete-icon" />
-          <span className="delete-label">Delete</span>
-        </button>
       </li>
     )
   });

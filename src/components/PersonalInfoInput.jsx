@@ -5,7 +5,7 @@ function PersonalInfoInput({ fname, lname, jobTitle, email, phone, onChange }) {
       <div className="input-header">
         <h2 className="input-title">Personal Information</h2>
       </div>
-      <div className="input-group required">
+      <div className="input-group input-group--small required">
         <label className="input-label" htmlFor="fname">First name <span className="asterisk">&#42;</span></label>
         <input
           className="input"
@@ -16,7 +16,7 @@ function PersonalInfoInput({ fname, lname, jobTitle, email, phone, onChange }) {
           onChange={onChange}
           required />
       </div>
-      <div className="input-group required">
+      <div className="input-group input-group--small required">
         <label className="input-label" htmlFor="lname">Last name <span className="asterisk">&#42;</span></label>
         <input
           className="input"

@@ -8,6 +8,12 @@ function ExperienceInput({ experienceData, onChange, onAdd, onRemove }) {
     const index = experienceData.indexOf(experience);
     return (
       <li key={index} data-key={index} className="input-card">
+        <div className="input-card-header">
+          <h3 className="input-card-heading">{experience.label ? experience.label : "Experience "+(index+1)}</h3>
+          <button className="delete-btn" onClick={() => onRemove(index)}>
+            <DeleteForeverIcon className="delete-icon" />
+          </button>
+        </div>
         <div className="input-group">
           <label className="input-label" htmlFor={"position-"+index}>Position</label>
           <input
@@ -85,10 +91,6 @@ function ExperienceInput({ experienceData, onChange, onAdd, onRemove }) {
             onChange={onChange}
           />
         </div>
-        <button className="delete-btn" onClick={() => onRemove(index)}>
-          <DeleteForeverIcon className="delete-icon" />
-          <span className="delete-label">Delete</span>
-        </button>
       </li>
     )
   });
