@@ -1,7 +1,7 @@
 const example = {
   fname: "Sheena",
   lname: "Gonzalez",
-  jobTitle: "Software Developer",
+  jobTitle: "Software Developer & UX Designer",
   email: "shngonzalez@gmail.com",
   links: [
     {
@@ -66,7 +66,7 @@ const example = {
   ],
   projects: [
     {
-      title: '"Easy CV" | Resume Builder',
+      title: "Easy CV",
       links: [
         {
           label: "View code",
@@ -81,7 +81,7 @@ const example = {
       description: "A React web application where users can input their information and generate a resumé in .pdf format",
     },
     {
-      title: "MangaPin | Personal Manga Database",
+      title: "MangaPin",
       links: [
         {
           label: "View code",
