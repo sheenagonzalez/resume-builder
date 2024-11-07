@@ -1,4 +1,5 @@
-import { PropTypes } from "prop-types";
+import PropTypes from 'prop-types';
+import { format, addMonths } from 'date-fns';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
@@ -36,7 +37,7 @@ function EducationInput({ educationData, onChange, onAdd, onRemove }) {
             type="month"
             id="startDate"
             name="startDate"
-            defaultValue={education.startDate}
+            defaultValue={format(addMonths(education.startDate, 1), 'yyy-MM')}
             onChange={onChange}
           />
         </div>
@@ -47,7 +48,7 @@ function EducationInput({ educationData, onChange, onAdd, onRemove }) {
             type="month"
             id="endDate"
             name="endDate"
-            defaultValue={education.endDate}
+            defaultValue={format(addMonths(education.endDate, 1), 'yyy-MM')}
             onChange={onChange}
           />
         </div>
