@@ -12,6 +12,7 @@ import ProjectsInput from './components/ProjectsInput.jsx'
 import SkillsInput from './components/SkillsInput.jsx'
 import Resume from './components/Resume.jsx'
 import html2pdf from 'html2pdf.js'
+import DownloadIcon from '@mui/icons-material/Download';
 
 function App() {
   const [resume, setResume] = useState(example);
@@ -170,58 +171,65 @@ function App() {
   }
 
   return (
-    <>
-      <AppHeader
-        appTitle="EasyCV"
-        appDescription="Build a simple, ATS-friendly resume within minutes. Simply enter your information and EasyCV automatically generates a .PDF file that you can download for free!"
-      />
-      <form className="form">
-        <PersonalInfoInput
-          fname={resume.fname}
-          lname={resume.lname}
-          jobTitle={resume.jobTitle}
-          email={resume.email}
-          phone={resume.phone}
-          onChange={changePersonalInfo}
+    <div className="app-container">
+      <div className="form-container">
+        <AppHeader
+          appTitle="EasyCV"
+          appDescription="Build a simple, ATS-friendly resume within minutes. Simply enter your information and EasyCV automatically generates a .PDF file that you can download for free!"
         />
-        <LinksInput
-          linksData={resume.links}
-          onChange={changeLinks}
-          onAdd={addLink}
-          onRemove={removeLink}
+        <form className="form">
+          <PersonalInfoInput
+            fname={resume.fname}
+            lname={resume.lname}
+            jobTitle={resume.jobTitle}
+            email={resume.email}
+            phone={resume.phone}
+            onChange={changePersonalInfo}
+          />
+          <LinksInput
+            linksData={resume.links}
+            onChange={changeLinks}
+            onAdd={addLink}
+            onRemove={removeLink}
+          />
+          <EducationInput
+            educationData={resume.education}
+            onChange={changeEducation}
+            onAdd={addEducation}
+            onRemove={removeEducation}
+          />
+          <ExperienceInput
+            experienceData={resume.experience}
+            onChange={changeExperience}
+            onAdd={addExperience}
+            onRemove={removeExperience}
+          />
+          <ProjectsInput
+            projectsData={resume.projects}
+            onChange={changeProjects}
+            onAdd={addProject}
+            onRemove={removeProject}
+          />
+          <SkillsInput
+            skillsData={resume.skills}
+            onChange={changeSkills}
+            onAdd={addSkillset}
+            onRemove={removeSkillset}
+          />
+        </form>
+        <AppFooter
+          holderName="Sheena Gonzalez"
+          year="2024"
         />
-        <EducationInput
-          educationData={resume.education}
-          onChange={changeEducation}
-          onAdd={addEducation}
-          onRemove={removeEducation}
-        />
-        <ExperienceInput
-          experienceData={resume.experience}
-          onChange={changeExperience}
-          onAdd={addExperience}
-          onRemove={removeExperience}
-        />
-        <ProjectsInput
-          projectsData={resume.projects}
-          onChange={changeProjects}
-          onAdd={addProject}
-          onRemove={removeProject}
-        />
-        <SkillsInput
-          skillsData={resume.skills}
-          onChange={changeSkills}
-          onAdd={addSkillset}
-          onRemove={removeSkillset}
-        />
-        <input type="button" value="Download PDF" onClick={downloadPDF} />
-      </form>
-      <Resume resume={resume} />
-      <AppFooter
-        holderName="Sheena Gonzalez"
-        year="2024"
-      />
-    </>
+      </div>
+      <div className="resume-container">
+        <Resume resume={resume} />
+      </div>
+      <button className="download-btn" onClick={downloadPDF}>
+        <DownloadIcon className="download-icon" />
+        <span className="download-label">Download PDF</span>
+      </button>
+    </div>
   )
 }
 
