@@ -172,8 +172,8 @@ function App() {
   return (
     <>
       <AppHeader
-        appTitle="Easy CV"
-        appDescription=""
+        appTitle="EasyCV"
+        appDescription="Build a simple, ATS-friendly resume within minutes. Simply enter your information and EasyCV automatically generates a .PDF file that you can download for free!"
       />
       <form className="form">
         <PersonalInfoInput
