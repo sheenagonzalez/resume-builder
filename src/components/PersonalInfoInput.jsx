@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 function PersonalInfoInput({ fname, lname, jobTitle, email, phone, onChange }) {
   return (
-    <section className="input-section">
+    <section className="input-section personal-info">
       <div className="input-header">
         <h2 className="input-title">Personal Information</h2>
       </div>
