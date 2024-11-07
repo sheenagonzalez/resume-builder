@@ -5,8 +5,8 @@ function Resume({ resume }) {
   return (
     <div className="resume">
       <div className="resume-header">
-        <h1 className="full-name">{resume.fname} {resume.lname}</h1>
-        {resume.jobTitle && (<p className="job-title">{resume.jobTitle}</p>)}
+        <h1 className="full-name bold">{resume.fname} {resume.lname}</h1>
+        {resume.jobTitle && (<p className="job-title bold">{resume.jobTitle}</p>)}
         <p className="personal-details">
           <a className="email" href={"mailto:"+resume.email}>{resume.email}</a>
           {resume.phone && (<a className="phone" href={"tel:"+resume.phone}> | {resume.phone}</a>)} 
@@ -85,9 +85,9 @@ function Resume({ resume }) {
                 <div>
                   <h3 className="item-heading bold">{proj.title}</h3>
                   {proj.links.map((link, ind) => (
-                    <div key={ind}>
+                    <span key={ind}>
                       <a className="item-link" href={link.url}>{link.label}</a>{ind !== Object.keys(proj.links).length - 1 ? (<span> | </span>) : null}
-                    </div>
+                    </span>
                   ))}
                 </div>
                 <div>

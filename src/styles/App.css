@@ -232,14 +232,41 @@ button,
 
 .resume {
   background-color: white;
-  padding: 2rem 4rem;
+  padding: 1.5rem 2.5rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
   color: black;
 }
 
+.full-name,
+.job-title,
+.personal-details,
 .section-heading {
-  font-size: 14px;
+  text-align: center;
+}
+
+.full-name {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.job-title {
+  font-size: 12px;
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+.personal-details {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.section-heading {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .item-header {
@@ -263,12 +290,14 @@ button,
 
 .item-heading,
 .item-dates {
+  margin-top: 5px;
   margin-bottom: 0;
 }
 
 .item-subheading,
 .item-location {
-  margin-top: 0;
+  margin-top: -2px;
+  margin-bottom: 2px;
 }
 
 .bold {
