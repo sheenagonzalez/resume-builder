@@ -26,12 +26,6 @@ function ProjectsInput({ projectsData, onChange, onAdd, onRemove }) {
             onChange={onChange}
           />
         </div>
-        <LinksInput
-          linksData={project.links}
-          onChange={onChange}
-          onAdd={onAdd}
-          onRemove={onRemove}
-        />
         <div className="input-group">
           <label className="input-label" htmlFor={"completionDate-"+index}>Completion date</label>
           <input
@@ -54,6 +48,12 @@ function ProjectsInput({ projectsData, onChange, onAdd, onRemove }) {
             onChange={onChange}
           />
         </div>
+        <LinksInput
+          linksData={project.links}
+          onChange={onChange}
+          onAdd={onAdd}
+          onRemove={onRemove}
+        />
       </li>
     )
   });
