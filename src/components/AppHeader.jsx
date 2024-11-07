@@ -1,9 +1,9 @@
 function AppHeader(appDetails) {
   return (
-    <div className="container">
-      <div className="hero">
-        <h1 className="heading">{appDetails.appTitle}</h1>
-        <p className="description">{appDetails.appDescription}</p>
+    <div className="app-header">
+      <div className="app-hero">
+        <h1 className="app-heading">{appDetails.appTitle}</h1>
+        <p className="app-description">{appDetails.appDescription}</p>
       </div>
     </div>
   )
