@@ -8,7 +8,7 @@ function ProjectsInput({ projectsData, onChange, onAdd, onRemove }) {
   const projectsList = projectsData.map((project) => {
     const index = projectsData.indexOf(project);
     return (
-      <li key={index} data-key={index} className="input-card">
+      <li key={index} data-key={index} className="input-card project">
         <div className="input-card-header">
           <h3 className="input-card-heading">{project.title ? project.title : "Project "+(index+1)}</h3>
           <button className="delete-btn" onClick={() => onRemove(index)}>
@@ -27,7 +27,6 @@ function ProjectsInput({ projectsData, onChange, onAdd, onRemove }) {
           />
         </div>
         <LinksInput
-          className="input-section--sub"
           linksData={project.links}
           onChange={onChange}
           onAdd={onAdd}
