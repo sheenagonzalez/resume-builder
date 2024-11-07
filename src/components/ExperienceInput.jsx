@@ -1,5 +1,5 @@
-import { PropTypes } from "prop-types";
-import AddIcon from '@mui/icons-material/Add';
+import PropTypes from 'prop-types';
+import { format, addMonths } from 'date-fns';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
 function ExperienceInput({ experienceData, onChange, onAdd, onRemove }) {
@@ -36,7 +36,7 @@ function ExperienceInput({ experienceData, onChange, onAdd, onRemove }) {
             type="month"
             id="startDate"
             name="startDate"
-            defaultValue={experience.startDate}
+            defaultValue={format(addMonths(experience.startDate, 1), 'yyy-MM')}
             onChange={onChange}
           />
         </div>
@@ -47,7 +47,7 @@ function ExperienceInput({ experienceData, onChange, onAdd, onRemove }) {
             type="month"
             id="endDate"
             name="endDate"
-            defaultValue={experience.endDate}
+            defaultValue={format(addMonths(experience.endDate, 1), 'yyy-MM')}
             onChange={onChange}
           />
         </div>
