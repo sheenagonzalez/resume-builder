@@ -22,24 +22,24 @@ function Resume({ resume }) {
           {resume.experience.map((exp, index) => (
             <li key={index} className="section-item">
               <div className="item-header">
-                <div>
+                <div className="align-left">
                   <h3 className="item-heading bold">{exp.position}</h3>
                   <p className="item-subheading bold">{exp.employer}</p>
                 </div>
-                <div>
+                <div className="align-right">
                   {exp.startDate && (
-                      <p className='item-dates bold'>
+                      <p className='item-dates italic'>
                         {format(addMonths(new Date(exp.startDate), 1), 'MMM yyyy')} - {' '}
                         {exp.endDate || !exp.isCurrent ? format(addMonths(new Date(exp.endDate), 1), 'MMM yyyy') : 'Present'}
                       </p>
                     )}
-                  <p className="item-location bold">{exp.location}</p>
+                  <p className="item-location italic">{exp.location}</p>
                 </div>
               </div>
               <ul className="item-list">
-                  {exp.summary.split('. ').map((item, ind) => (
+                  {exp.summary && (exp.summary.split('. ').map((item, ind) => (
                     <li key={ind} className="item-bullet">{item}</li>
-                  ))}
+                  )))}
               </ul>
             </li>
           ))}
@@ -52,24 +52,24 @@ function Resume({ resume }) {
           {resume.education.map((edu, index) => (
             <li key={index} className="section-item">
               <div className="item-header">
-                <div>
+                <div className="align-left">
                   <h3 className="item-heading bold">{edu.institution}</h3>
                   <p className="item-subheading bold">{edu.degree}</p>
                 </div>
-                <div>
+                <div className="align-right">
                   {edu.startDate && (
-                      <p className='item-dates bold'>
+                      <p className='item-dates italic'>
                         {format(addMonths(new Date(edu.startDate), 1), 'MMM yyyy')} - {' '}
                         {edu.endDate ? format(addMonths(new Date(edu.endDate), 1), 'MMM yyyy') : 'Present'}
                       </p>
                     )}
-                  <p className="item-location bold">{edu.location}</p>
+                  <p className="item-location italic">{edu.location}</p>
                 </div>
               </div>
               <ul className="item-list">
-                  {edu.description.split('. ').map((item, ind) => (
+                  {edu.description && (edu.description.split('. ').map((item, ind) => (
                     <li key={ind} className="item-bullet">{item}</li>
-                  ))}
+                  )))}
               </ul>
             </li>
           ))}
@@ -92,17 +92,17 @@ function Resume({ resume }) {
                 </div>
                 <div>
                   {proj.completionDate && (
-                      <p className='item-dates bold'>
+                      <p className='item-dates italic'>
                         {format(addMonths(new Date(proj.completionDate), 1), 'MMM yyyy')}
                       </p>
                     )}
-                  <p className="item-location bold">{proj.location}</p>
+                  <p className="item-location italic">{proj.location}</p>
                 </div>
               </div>
               <ul className="item-list">
-                  {proj.description.split('. ').map((item, ind) => (
+                  {proj.description && (proj.description.split('. ').map((item, ind) => (
                     <li key={ind} className="item-bullet">{item}</li>
-                  ))}
+                  )))}
               </ul>
             </li>
           ))}
@@ -114,9 +114,7 @@ function Resume({ resume }) {
         <ul className="section-list">
           {resume.skills.map((skillset, index) => (
             <li key={index} className="section-item">
-              <div className="item-header">
-                <p className="item-heading bold"><span className="bold">{skillset.label}:</span> {skillset.list.join(', ')}</p>
-              </div>
+              <p className="item-bullet"><span className="bold">{skillset.label}:</span> {skillset.list.join(', ')}</p>
             </li>
           ))}
         </ul>

@@ -27,6 +27,27 @@ button {
   background-color: var(--dark);
 }
 
+.app-heading {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 3rem;
+  background-color: var(--indigo);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  margin: 1rem auto 1.25rem;
+  cursor: default;
+}
+
+.app-description {
+  color: var(--dark-gray);
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
 .form-container {
   padding: 1rem 2rem;
   width: 80%;
@@ -34,7 +55,6 @@ button {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-
 .form {
   background-color: white;
   padding: 0.5rem 1.5rem;
@@ -43,20 +63,33 @@ button {
   color: var(--dark);
 }
 
-.input-section {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: end;
-  align-items: start;
+.input-section,
+.input-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  column-gap: 0.5rem;
+  justify-items: start;
   width: 100%;
   margin-bottom: 1rem;
 }
 
+button,
+.input-header,
+.input-group,
+.input-list,
+.input-card-header,
+.project .input-section {
+  grid-column: span 2;
+}
+
 .input-header {
   width: 100%;
-  margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--navy);
+}
+
+.personal-info .input-header {
+  margin-bottom: 1rem;
 }
 
 .input-title {
@@ -67,24 +100,57 @@ button {
   width: 100%;
 }
 
-.input-section--sub {
-  font-size: 0.5rem;
+.link.input-card {
+  margin-bottom: 0;
+}
+
+.project .input-section .input-card {
+  position: relative;
+}
+
+.project .input-header {
+  font-size: 0.65rem;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.project .input-section .input-card-heading {
+  display: none;
+}
+
+.project .input-section .input-list {
+  margin-top: -1.5rem;
+}
+
+.project .input-section .delete-btn {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+}
+
+.project .input-card {
+  margin: 0;
+  padding: 0;
 }
 
 .input-card {
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 0 0 1.5rem;
   border-bottom: 1px solid var(--dark-gray);
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: end;
 }
 
 .input-card-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0 0;
+}
+
+.input-card-heading {
+  color: var(--dark);
+  margin: 0;
 }
 
 .input-group {
@@ -94,12 +160,13 @@ button {
 }
 
 .input-group--small {
-  width: calc(50% - 0.25rem);
+  grid-column: span 1;
 }
 
 .input-label {
   color: gray;
   font-size: 0.825rem;
+  margin: 0.5rem 0 0.125rem;
 }
 
 .input {
@@ -114,6 +181,11 @@ button {
 .input:active {
   border-bottom: 2px solid var(--navy);
   outline: none;
+}
+
+.input-caption {
+  font-size: 0.75rem;
+  margin-top: 0.125rem;
 }
 
 .delete-btn {
@@ -132,6 +204,7 @@ button {
   background-color: transparent;
   color: var(--indigo);
   padding: 0.5rem 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
 }
 
 .resume-container {
@@ -146,8 +219,59 @@ button {
 .resume {
   background-color: white;
   padding: 2rem 4rem;
-  font-size: 0.75rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
   color: black;
+}
+
+.section-heading {
+  font-size: 14px;
+}
+
+.item-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.item-heading {
+  font-size: 12px;
+}
+
+.item-heading,
+.item-dates {
+  margin-bottom: 0;
+}
+
+.item-subheading,
+.item-location {
+  margin-top: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.item-list {
+  padding-left: 10px;
+  list-style: disc;
+}
+
+.item-bullet {
+  font-size: 10px;
 }
 
 .download-btn {
@@ -197,4 +321,10 @@ button {
 .section-item,
 .input-card {
   list-style: none;
+}
+
+.copyright {
+  color: var(--dark-gray);
+  font-size: 0.625rem;
+  text-align: center;
 }
