@@ -1,4 +1,4 @@
-import { PropTypes } from "prop-types";
+import PropTypes from 'prop-types';
 function PersonalInfoInput({ fname, lname, jobTitle, email, phone, onChange }) {
   return (
     <section className="input-section">
