@@ -11,6 +11,7 @@ import ExperienceInput from './components/ExperienceInput.jsx'
 import ProjectsInput from './components/ProjectsInput.jsx'
 import SkillsInput from './components/SkillsInput.jsx'
 import Resume from './components/Resume.jsx'
+import html2pdf from 'html2pdf.js'
 
 function App() {
   const [resume, setResume] = useState(example);
@@ -155,6 +156,18 @@ function App() {
   function removeSkillset(index) {
     setResume({...resume, skills: resume.skills.filter((skillset, ind) => ind !== index)})
   }
+  
+  function downloadPDF() {
+    const element = document.querySelector('.resume');
+    const opt = {
+      margin: 1,
+      filename: 'resume.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 1 },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+    };
+    html2pdf().from(element).set(opt).save();
+  }
 
   return (
     <>
@@ -201,7 +214,7 @@ function App() {
           onAdd={addSkillset}
           onRemove={removeSkillset}
         />
-        <input type="submit" value="Download PDF" />
+        <input type="button" value="Download PDF" onClick={downloadPDF} />
       </form>
       <Resume resume={resume} />
       <AppFooter
