@@ -88,7 +88,7 @@ function EducationInput({ educationData, onChange, onAdd, onRemove }) {
         <h2 className="input-title">Education</h2>
       </div>
       <ul className="input-list">{educationList}</ul>
-      <button onClick={onAdd}>
+      <button className="add-btn" onClick={() => onAdd()}>
         <AddIcon className="add-icon" />
         <span className="add-label">Add one more education</span>
       </button>

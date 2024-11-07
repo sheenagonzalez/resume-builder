@@ -99,7 +99,7 @@ function ExperienceInput({ experienceData, onChange, onAdd, onRemove }) {
         <h2 className="input-title">Experience</h2>
       </div>
       <ul className="input-list">{experienceList}</ul>
-      <button onClick={onAdd}>
+      <button className="add-btn" onClick={() => onAdd()}>
         <AddIcon className="add-icon" />
         <span className="add-label">Add one more experience</span>
       </button>

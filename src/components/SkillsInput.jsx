@@ -44,7 +44,7 @@ function SkillsInput({ skillsData, onChange, onAdd, onRemove }) {
         <h2 className="input-title">Skills</h2>
       </div>
       <ul className="input-list">{skillsList}</ul>
-      <button onClick={onAdd}>
+      <button className="add-btn" onClick={() => onAdd()}>
         <AddIcon className="add-icon" />
         <span className="add-label">Add one more skillset</span>
       </button>

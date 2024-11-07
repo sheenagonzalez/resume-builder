@@ -43,7 +43,7 @@ function LinksInput({ linksData, onChange, onAdd, onRemove }) {
         <h2 className="input-title">Links</h2>
       </div>
       <ul className="input-list">{linksList}</ul>
-      <button onClick={onAdd}>
+      <button className="add-btn" onClick={() => onAdd()}>
         <AddIcon className="add-icon" />
         <span className="add-label">Add one more link</span>
       </button>

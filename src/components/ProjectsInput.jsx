@@ -62,7 +62,7 @@ function ProjectsInput({ projectsData, onChange, onAdd, onRemove }) {
         <h2 className="input-title">Projects</h2>
       </div>
       <ul className="input-list">{projectsList}</ul>
-      <button onClick={onAdd}>
+      <button className="add-btn" onClick={() => onAdd()}>
         <AddIcon className="add-icon" />
         <span className="add-label">Add one more project</span>
       </button>
