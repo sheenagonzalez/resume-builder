@@ -9,66 +9,66 @@ function EducationInput({ educationData, onChange, onAdd, onRemove }) {
     return (
       <li key={index} data-key={index} className="input-card">
         <div className="input-group">
-          <label className="input-label" htmlFor="institution">Institution</label>
+          <label className="input-label" htmlFor={"institution-"+index}>Institution</label>
           <input
             className="input"
             type="text"
-            id="institution"
+            id={"institution-"+index}
             name="institution"
             defaultValue={education.institution}
             onChange={onChange}
           />
         </div>
         <div className="input-group">
-          <label className="input-label" htmlFor="degree">Degree</label>
+          <label className="input-label" htmlFor={"degree-"+index}>Degree</label>
           <input
             className="input"
             type="text"
-            id="degree"
+            id={"degree-"+index}
             name="degree"
             defaultValue={education.degree}
             onChange={onChange}
           />
         </div>
         <div className="input-group">
-          <label className="input-label" htmlFor="startDate">Start date</label>
+          <label className="input-label" htmlFor={"startDate-"+index}>Start date</label>
           <input
             className="input"
             type="month"
-            id="startDate"
+            id={"startDate-"+index}
             name="startDate"
-            defaultValue={format(addMonths(education.startDate, 1), 'yyy-MM')}
+            defaultValue={format(addMonths(education.startDate, 1), 'yyyy-MM')}
             onChange={onChange}
           />
         </div>
         <div className="input-group">
-          <label className="input-label" htmlFor="endDate">Expected/Graduation date</label>
+          <label className="input-label" htmlFor={"endDate-"+index}>Expected/Graduation date</label>
           <input
             className="input"
             type="month"
-            id="endDate"
+            id={"endDate-"+index}
             name="endDate"
-            defaultValue={format(addMonths(education.endDate, 1), 'yyy-MM')}
+            defaultValue={format(addMonths(education.endDate, 1), 'yyyy-MM')}
             onChange={onChange}
           />
         </div>
         <div className="input-group">
-          <label className="input-label" htmlFor="location">Location</label>
+          <label className="input-label" htmlFor={"location-"+index}>Location</label>
           <input
             className="input"
             type="text"
-            id="location"
+            id={"location-"+index}
             name="location"
             defaultValue={education.location}
             onChange={onChange}
           />
         </div>
         <div className="input-group">
-          <label className="input-label" htmlFor="description">Description</label>
+          <label className="input-label" htmlFor={"description-"+index}>Description</label>
           <input
             className="input"
             type="textarea"
-            id="description"
+            id={"description-"+index}
             name="description"
             defaultValue={education.description}
             onChange={onChange}

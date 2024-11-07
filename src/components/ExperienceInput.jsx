@@ -9,77 +9,77 @@ function ExperienceInput({ experienceData, onChange, onAdd, onRemove }) {
     return (
       <li key={index} data-key={index} className="input-card">
         <div className="input-group">
-          <label className="input-label" htmlFor="position">Position</label>
+          <label className="input-label" htmlFor={"position-"+index}>Position</label>
           <input
             className="input"
             type="text"
-            id="position"
+            id={"position-"+index}
             name="position"
             defaultValue={experience.position}
             onChange={onChange}
           />
         </div>
         <div className="input-group">
-          <label className="input-label" htmlFor="employer">Employer</label>
+          <label className="input-label" htmlFor={"employer-"+index}>Employer</label>
           <input
             className="input"
             type="text"
-            id="employer"
+            id={"employer-"+index}
             name="employer"
             defaultValue={experience.employer}
             onChange={onChange}
           />
         </div>
         <div className="input-group">
-          <label className="input-label" htmlFor="startDate">Start date</label>
+          <label className="input-label" htmlFor={"startDate-"+index}>Start date</label>
           <input
             className="input"
             type="month"
-            id="startDate"
+            id={"startDate-"+index}
             name="startDate"
-            defaultValue={format(addMonths(experience.startDate, 1), 'yyy-MM')}
+            defaultValue={format(addMonths(experience.startDate, 1), 'yyyy-MM')}
             onChange={onChange}
           />
         </div>
         <div className="input-group">
-          <label className="input-label" htmlFor="endDate">End date</label>
+          <label className="input-label" htmlFor={"endDate-"+index}>End date</label>
           <input
             className="input"
             type="month"
-            id="endDate"
+            id={"endDate-"+index}
             name="endDate"
-            defaultValue={format(addMonths(experience.endDate, 1), 'yyy-MM')}
+            defaultValue={format(addMonths(experience.endDate, 1), 'yyyy-MM')}
             onChange={onChange}
           />
         </div>
         <div className="input-group">
-          <label className="input-label" htmlFor="isCurrent">Currently working here</label>
+          <label className="input-label" htmlFor={"isCurrent-"+index}>Currently working here</label>
           <input
             className="input"
             type="checkbox"
-            id="isCurrent"
+            id={"isCurrent-"+index}
             name="isCurrent"
             defaultValue={experience.isCurrent}
             onChange={onChange}
           />
         </div>
         <div className="input-group">
-          <label className="input-label" htmlFor="location">Location</label>
+          <label className="input-label" htmlFor={"location-"+index}>Location</label>
           <input
             className="input"
             type="text"
-            id="location"
+            id={"location-"+index}
             name="location"
             defaultValue={experience.location}
             onChange={onChange}
           />
         </div>
         <div className="input-group">
-          <label className="input-label" htmlFor="summary">Summary</label>
+          <label className="input-label" htmlFor={"summary-"+index}>Summary</label>
           <input
             className="input"
             type="textarea"
-            id="summary"
+            id={"summary-"+index}
             name="summary"
             defaultValue={experience.summary}
             onChange={onChange}

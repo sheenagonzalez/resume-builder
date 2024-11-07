@@ -10,11 +10,11 @@ function ProjectsInput({ projectsData, onChange, onAdd, onRemove }) {
     return (
       <li key={index} data-key={index} className="input-card">
         <div className="input-group">
-          <label className="input-label" htmlFor="title">Title</label>
+          <label className="input-label" htmlFor={"title-"+index}>Title</label>
           <input
             className="input"
             type="text"
-            id="title"
+            id={"title-"+index}
             name="title"
             defaultValue={project.title}
             onChange={onChange}
@@ -27,22 +27,22 @@ function ProjectsInput({ projectsData, onChange, onAdd, onRemove }) {
           onRemove={onRemove}
         />
         <div className="input-group">
-          <label className="input-label" htmlFor="completionDate">Completion date</label>
+          <label className="input-label" htmlFor={"completionDate-"+index}>Completion date</label>
           <input
             className="input"
             type="month"
-            id="completionDate"
+            id={"completionDate-"+index}
             name="completionDate"
-            defaultValue={format(addMonths(project.completionDate, 1), 'yyy-MM')}
+            defaultValue={format(addMonths(project.completionDate, 1), 'yyyy-MM')}
             onChange={onChange}
           />
         </div>
         <div className="input-group">
-          <label className="input-label" htmlFor="description">Description</label>
+          <label className="input-label" htmlFor={"description-"+index}>Description</label>
           <input
             className="input"
             type="textarea"
-            id="description"
+            id={"description-"+index}
             name="description"
             defaultValue={project.description}
             onChange={onChange}
