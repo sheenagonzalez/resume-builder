@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { format, addMonths } from 'date-fns';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import LinksInput from './LinksInput.jsx'
@@ -32,7 +33,7 @@ function ProjectsInput({ projectsData, onChange, onAdd, onRemove }) {
             type="month"
             id="completionDate"
             name="completionDate"
-            defaultValue={project.completionDate}
+            defaultValue={format(addMonths(project.completionDate, 1), 'yyy-MM')}
             onChange={onChange}
           />
         </div>
