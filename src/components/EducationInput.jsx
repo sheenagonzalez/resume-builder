@@ -55,7 +55,7 @@ function EducationInput({ educationData, onChange, onAdd, onRemove }) {
           <label className="input-label" htmlFor="location">Location</label>
           <input
             className="input"
-            type="month"
+            type="text"
             id="location"
             name="location"
             defaultValue={education.location}
