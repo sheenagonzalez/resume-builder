@@ -9,7 +9,7 @@ function EducationInput({ educationData, onChange, onAdd, onRemove }) {
     return (
       <li key={index} data-key={index} className="input-card">
         <div className="input-card-header">
-          <h3 className="input-card-heading">{education.label ? education.label : "Institution "+(index+1)}</h3>
+          <h3 className="input-card-heading">{education.institution ? education.institution : "Institution "+(index+1)}</h3>
           <button className="delete-btn" onClick={() => onRemove(index)}>
             <DeleteForeverIcon className="delete-icon" />
           </button>

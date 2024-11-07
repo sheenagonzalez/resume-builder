@@ -9,7 +9,7 @@ function ExperienceInput({ experienceData, onChange, onAdd, onRemove }) {
     return (
       <li key={index} data-key={index} className="input-card">
         <div className="input-card-header">
-          <h3 className="input-card-heading">{experience.label ? experience.label : "Experience "+(index+1)}</h3>
+          <h3 className="input-card-heading">{experience.employer ? experience.employer : "Experience "+(index+1)}</h3>
           <button className="delete-btn" onClick={() => onRemove(index)}>
             <DeleteForeverIcon className="delete-icon" />
           </button>
