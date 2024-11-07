@@ -163,10 +163,24 @@ button,
   grid-column: span 1;
 }
 
+.input-group--checkbox {
+  flex-direction: row-reverse;
+  column-gap: 0.5rem;
+  align-items: center;
+  justify-content: start;
+  margin-top: 1rem;
+}
+
 .input-label {
   color: gray;
   font-size: 0.825rem;
   margin: 0.5rem 0 0.125rem;
+}
+
+.input-label--checkbox {
+  font-size: 0.9rem;
+  color: black;
+  margin: 0;
 }
 
 .input {

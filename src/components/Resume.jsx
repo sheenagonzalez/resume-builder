@@ -30,7 +30,7 @@ function Resume({ resume }) {
                   {exp.startDate && (
                       <p className='item-dates italic'>
                         {format(addMonths(new Date(exp.startDate), 1), 'MMM yyyy')} - {' '}
-                        {exp.endDate || !exp.isCurrent ? format(addMonths(new Date(exp.endDate), 1), 'MMM yyyy') : 'Present'}
+                      {exp.isCurrent ? 'Present' : exp.endDate && (format(addMonths(new Date(exp.endDate), 1), 'MMM yyyy'))}
                       </p>
                     )}
                   <p className="item-location italic">{exp.location}</p>

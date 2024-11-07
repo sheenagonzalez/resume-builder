@@ -80,8 +80,8 @@ function ExperienceInput({ experienceData, onChange, onAdd, onRemove }) {
             onChange={onChange}
           />
         </div>
-        <div className="input-group input-group--small">
-          <label className="input-label" htmlFor={"isCurrent-"+index}>Currently working here</label>
+        <div className="input-group input-group--small input-group--checkbox">
+          <label className="input-label input-label--checkbox" htmlFor={"isCurrent-"+index}>Currently working here</label>
           <input
             className="input"
             type="checkbox"
