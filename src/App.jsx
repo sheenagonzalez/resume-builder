@@ -27,11 +27,11 @@ function App() {
     }));
   }, [resume.links, resume.education, resume.experience, resume.projects, resume.skills]);
 
-  function changePersonalInfo(e) {
+  const changePersonalInfo = (e) => {
     setResume({ ...resume, [e.target.name]: e.target.value });
   }
 
-  function changeLinks(e) {
+  const changeLinks = (e) => {
     const { name, value } = e.target;
     const index = parseInt(e.target.closest('li').dataset.key, 10);
     setResume(prevState => ({
@@ -42,19 +42,19 @@ function App() {
     }));
   }
 
-  function addLink() {
+  const addLink = () => {
     const newLink = {
       label: '',
       url: '',
     };
-    setResume({ ...resume, links: [...resume.links, newLink] });
+    setResume({...resume, links: [...resume.links, newLink]});
   }
 
-  function removeLink(index) {
+  const removeLink = (index) => {
     setResume({...resume, links: resume.links.filter((link, ind) => ind !== index)})
   }
 
-  function changeEducation(e) {
+  const changeEducation = (e) => {
     const { name, value } = e.target;
     const index = parseInt(e.target.closest('li').dataset.key, 10);
     setResume(prevState => ({
@@ -65,7 +65,7 @@ function App() {
     }));
   }
 
-  function addEducation() {
+  const addEducation = () => {
     const newEducation = {
       institution: '',
       degree: '',
@@ -77,11 +77,11 @@ function App() {
     setResume({...resume, education: [...resume.education, newEducation]})
   }
 
-  function removeEducation(index) {
+  const removeEducation = (index) => {
     setResume({...resume, education: resume.education.filter((edu, ind) => ind !== index)})
   }
 
-  function changeExperience(e) {
+  const changeExperience = (e) => {
     const { name, value } = e.target;
     const index = parseInt(e.target.closest('li').dataset.key, 10);
     setResume(prevState => ({
@@ -92,7 +92,7 @@ function App() {
     }));
   }
 
-  function addExperience() {
+  const addExperience = () => {
     const newExperience = {
       position: '',
       employer: '',
@@ -105,11 +105,11 @@ function App() {
     setResume({...resume, experience: [...resume.experience, newExperience]})
   }
 
-  function removeExperience(index) {
+  const removeExperience = (index) => {
     setResume({...resume, experience: resume.experience.filter((exp, ind) => ind !== index)})
   }
 
-  function changeProjects(e) {
+  const changeProjects = (e) => {
     const { name, value } = e.target;
     const index = parseInt(e.target.closest('li').dataset.key, 10);
     setResume(prevState => ({
@@ -120,7 +120,7 @@ function App() {
     }));
   }
 
-  function addProject() {
+  const addProject = () => {
     const newProject = {
       title: '',
       links: [],
@@ -130,11 +130,11 @@ function App() {
     setResume({...resume, projects: [...resume.projects, newProject]})
   }
 
-  function removeProject(index) {
+  const removeProject = (index) => {
     setResume({...resume, projects: resume.projects.filter((proj, ind) => ind !== index)})
   }
 
-  function changeSkills(e) {
+  const changeSkills = (e) => {
     const { name, value } = e.target;
     const index = parseInt(e.target.closest('li').dataset.key, 10);
     setResume(prevState => ({
@@ -145,7 +145,7 @@ function App() {
     }));
   }
 
-  function addSkillset() {
+  const addSkillset = () => {
     const newSkillset = {
       label: '',
       list: [],
@@ -153,11 +153,11 @@ function App() {
     setResume({...resume, skills: [...resume.skills, newSkillset]})
   }
 
-  function removeSkillset(index) {
+  const removeSkillset = (index) => {
     setResume({...resume, skills: resume.skills.filter((skillset, ind) => ind !== index)})
   }
   
-  function downloadPDF() {
+  const downloadPDF = () => {
     const element = document.querySelector('.resume');
     const opt = {
       margin: 1,
