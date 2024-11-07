@@ -80,21 +80,6 @@ const example = {
       completionDate: new Date(2024, 11),
       description: "A React web application where users can input their information and generate a resumé in .pdf format",
     },
-    {
-      title: "MangaPin",
-      links: [
-        {
-          label: "View code",
-          url: "https://github.com/sheenagonzalez/mangapin",
-        },
-        {
-          label: "Live preview",
-          url: "https://sheenagonzalez.github.io/mangapin",
-        },
-      ],
-      completionDate: new Date(2024, 10),
-      description: "A small digital library of manga recommendations built using Vue.js and integrated with Kitsu API via axios",
-    },
   ],
   skills: [
     {
